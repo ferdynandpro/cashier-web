@@ -6,7 +6,7 @@ const PaymentLogDetails = ({ paymentId }) => {
   useEffect(() => {
     const fetchPaymentDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/bukti-pembayaran/${paymentId}/detail`);
+        const response = await fetch(`https://back-end-cashier.vercel.app/bukti-pembayaran/${paymentId}/detail`);
         if (!response.ok) {
           throw new Error('Failed to fetch payment details');
         }

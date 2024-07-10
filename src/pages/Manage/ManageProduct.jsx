@@ -17,7 +17,7 @@ const ManageProduct = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch("http://localhost:5000/products")
+    fetch("https://back-end-cashier.vercel.app/products")
       .then(res => res.json())
       .then(data => setAllProducts(data))
       .catch(error => console.error("Error fetching data:", error));
@@ -36,7 +36,7 @@ const ManageProduct = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://back-end-cashier.vercel.app/product/${id}`, {
       method: "DELETE",
     })
       .then(res => res.json())

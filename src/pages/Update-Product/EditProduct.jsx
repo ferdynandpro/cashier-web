@@ -34,7 +34,7 @@ const EditProduct = () => {
   ];
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://back-end-cashier.vercel.app/product/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);
@@ -71,7 +71,7 @@ const EditProduct = () => {
       updatedAt
     }
 
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://back-end-cashier.vercel.app/product/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

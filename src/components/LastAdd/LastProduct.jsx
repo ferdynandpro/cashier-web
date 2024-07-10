@@ -9,7 +9,7 @@ const LastProduct = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch("http://localhost:5000/products")
+    fetch("https://back-end-cashier.vercel.app/products")
       .then(res => res.json())
       .then(data => {
         const sortedProducts = data.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));

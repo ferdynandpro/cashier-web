@@ -44,7 +44,7 @@ const AddProduct = () => {
       updatedAt: new Date().toISOString()
     };
 
-    fetch("http://localhost:5000/upload-product", {
+    fetch("https://back-end-cashier.vercel.app/upload-product", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

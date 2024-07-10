@@ -14,7 +14,7 @@ const Register = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/register', {
+      const response = await fetch('https://back-end-cashier.vercel.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

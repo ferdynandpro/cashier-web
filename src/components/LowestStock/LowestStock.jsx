@@ -8,7 +8,7 @@ const LowestStock = () => {
   }, []);
 
   const fetchLowestStockProducts = () => {
-    fetch("http://localhost:5000/products")
+    fetch("https://back-end-cashier.vercel.app/products")
       .then(res => res.json())
       .then(data => {
         // Sort products by stock in ascending order

@@ -13,7 +13,7 @@ const PaymentLogs = () => {
     // Fetch payment logs
     const fetchPaymentLogs = async () => {
       try {
-        const response = await fetch('http://localhost:5000/bukti-pembayaran');
+        const response = await fetch('https://back-end-cashier.vercel.app/bukti-pembayaran');
         if (!response.ok) {
           throw new Error('Failed to fetch payment logs');
         }
@@ -69,7 +69,7 @@ const PaymentLogs = () => {
     if (!selectedPaymentId) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/bukti-pembayaran/${selectedPaymentId}/detail`);
+      const response = await fetch(`https://back-end-cashier.vercel.app/bukti-pembayaran/${selectedPaymentId}/detail`);
       if (!response.ok) {
         throw new Error('Failed to fetch payment details');
       }

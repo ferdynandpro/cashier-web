@@ -16,14 +16,14 @@ const Dashboard = () => {
   }, []);
 
   const fetchProductCount = () => {
-    fetch("http://localhost:5000/products")
+    fetch("https://back-end-cashier.vercel.app/products")
       .then(res => res.json())
       .then(data => setProductCount(data.length)) // Menghitung jumlah produk
       .catch(error => console.error("Error fetching product count:", error));
   };
 
   const fetchTransactionCount = () => {
-    fetch('http://localhost:5000/bukti-pembayaran')
+    fetch('https://back-end-cashier.vercel.app/bukti-pembayaran')
       .then(res => res.json())
       .then(data => setTransactionCount(data.length)) // Menghitung jumlah transaksi
       .catch(error => console.error('Error fetching transaction count:', error));
