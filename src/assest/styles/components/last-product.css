@@ -1,0 +1,100 @@
+.lastproduct--container {
+  border: 1px solid #2A3C5F;
+  background-color: #101935;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow-x: auto; /* Aktifkan scroll horizontal */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling pada iOS */
+}
+
+#last-5-products {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Gunakan fixed table layout */
+}
+
+#last-5-products th,
+#last-5-products td {
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap; /* Hindari pemutaran teks */
+}
+
+#last-5-products th {
+  background-color: #101935;
+  color: white;
+}
+
+.lastproduct--container .titles {
+  background-color: #101935;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#last-5-products tbody tr:nth-child(odd) {
+  background-color: #2A3C5F;
+}
+
+#last-5-products tbody tr:nth-child(even) {
+  background-color: #101935;
+}
+
+td {
+  color: white;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .lastproduct--container {
+    padding: 15px; /* Sesuaikan padding */
+  }
+
+  .titles {
+    font-size: 16px; /* Sesuaikan ukuran font */
+  }
+
+  #last-5-products th,
+  #last-5-products td {
+    padding: 0px; /* Sesuaikan padding */
+    font-size: 12px; /* Sesuaikan ukuran font */
+  }
+
+  /* Sembunyikan kolom ID dan Category */
+  #last-5-products th:nth-child(1),
+  #last-5-products td:nth-child(1),
+  #last-5-products th:nth-child(2),
+  #last-5-products td:nth-child(2),
+  #last-5-products th:nth-child(4),
+  #last-5-products td:nth-child(4) {
+    display: none;
+  }
+
+  .lastproduct--container{
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+
+  tr .index--product{
+    width: 10px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 958px) {
+
+  .lastproduct--container{
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+/* 
+#last-5-products th:nth-child(1),
+  #last-5-products td:nth-child(1), */
+  #last-5-products th:nth-child(2),
+  #last-5-products td:nth-child(2),
+  #last-5-products th:nth-child(4),
+  #last-5-products td:nth-child(4) {
+    display: none;
+  }}

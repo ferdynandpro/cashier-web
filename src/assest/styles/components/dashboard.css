@@ -1,0 +1,85 @@
+.dashboard--container{
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #101935; */
+    border-radius: 20px;
+    /* border: 2px solid #2A3C5F; */
+  }
+  
+  .dash--card{
+    width: 50%;
+    height: 360px;
+    /*height: ;
+    */background-color: var(--second-color);
+    border: 2px solid var(--third-color);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .dashboard--card{
+    gap: 2rem;
+  /* background-color: #101935; */
+  /* border: 1px solid white; */
+    /* padding: 50px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+  }
+  
+  .count--card{
+    font-size: 20px;
+  }
+  
+  .last--product{
+    margin-top: 40px;
+  }
+
+  
+  @media (max-width: 950px) {
+    .dashboard--card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+    }
+    .dash--card{
+      width: 100%;
+      margin-right: 50px;
+      /* background-color: #833a3a; */
+      /* display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  */
+    }
+    .kotak--kiri{
+      width: 50%;
+      height: 100px;
+      background-color: #22ad27;
+    }
+    .kotak--kanan{
+      width: 50%;
+      background-color: #22ad27;
+    }
+  }
+  @media (max-width: 768px) {
+    .dashboard--card {
+      display: flex;
+      flex-direction: column;  
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .dash--card{
+      height: 200px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+  .dash--card{
+    margin-right: 20px;
+    margin-left: -20px;
+  }
+}

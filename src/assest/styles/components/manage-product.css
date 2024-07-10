@@ -1,0 +1,164 @@
+.yes--no{
+  background-color: #fff;
+}
+
+.delete--message{
+  background-color: #101935;
+}
+.manage--content{
+  background-color: #101935;
+  padding: 50px;
+  border-radius: 50px;
+  border: 2px solid #212C4D;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #customers td, #customers th {
+    /* border: 1px solid #000000; */
+    padding: 10px;
+    text-align: center;
+  vertical-align: middle;
+  }
+
+  
+  #customers tr:nth-child(even){
+    background-color: #101935;
+    align-items: center;
+  }
+  #customers tbody tr:nth-child(odd) {
+    background-color: var(--third-color);
+  }
+  
+  /* #customers tr:hover {background-color: #ddd;
+  } */
+
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #101935;
+    color: rgb(255, 255, 255);
+  }
+
+
+  .prod--desc{
+    width: 300px;
+  }
+
+  .prod--category{
+    width: 70px;
+  }
+
+  .edit--btn{
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    color: #6C72FF;
+  }
+  
+  .delete--btn{
+    width: 30px;
+    color: #6C72FF;
+    height: 30px;
+    background-color: transparent;
+    
+  }
+
+  .prod--btn tr{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--first-color);
+  }
+  .green {
+    color: green;
+  }
+  
+  .yellow {
+    color: yellow;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  height: 70px;
+  background-color: var(--second-color);
+  border: 2px solid var(--third-color);
+  color: white;
+  text-align: start;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1100px) {
+  /* Sembunyikan kolom dengan indeks 2 (Category) dan 3 (Description) */
+  #customers td:nth-child(3),
+  #customers th:nth-child(3),
+  #customers td:nth-child(4),
+  #customers th:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  /* Sembunyikan kolom dengan indeks 2 (Category) dan 3 (Description) */
+  #customers td:nth-child(5),
+  #customers th:nth-child(5),
+  #customers td:nth-child(6),
+  #customers th:nth-child(6) {
+    display: none;
+  }
+
+  #customers table{
+    margin-left: -20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .manage--content{
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #customers td:nth-child(1),
+  #customers th:nth-child(1) {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #customers td:nth-child(7),
+  #customers th:nth-child(7) {
+    display: none;
+  }
+}
+

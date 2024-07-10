@@ -1,0 +1,43 @@
+.filter-buttons{
+    width: 100%;
+    height: 130px;
+    background-color: #101935 ;
+    border: 2px solid #212C4D;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.btn--filter-menu{
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #6C72FF;
+    padding: 10px;
+    /*border-bottom: 2px solid black;
+    */border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .filter-buttons{
+        /* margin-left: -20px; */
+        width: 100%;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .filter-buttons{
+        height: 230px;
+        
+    }
+
+  }
+  @media screen and (max-width: 350px) {
+    .filter-buttons{
+        margin-left: -20px;
+        width: 300px;
+        height: 230px;
+    }
+  }

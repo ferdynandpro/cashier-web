@@ -1,0 +1,69 @@
+
+.lowest-stock-products-container {
+  margin-top: 40px;
+  background-color: #101935;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 50%;
+  border: 2px solid #2A3C5F;
+  margin-bottom: 30px;
+}
+
+.lowest-stock-products-container .titles {
+  background-color: #101935;
+}  
+
+.lowest-stock-products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.lowest-stock-products-table th,
+.lowest-stock-products-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.lowest-stock-products-table th {
+  background-color: #101935;
+  color: white;
+}
+
+.lowest-stock-products-table tr:nth-child(even) {
+  background-color: #101935;
+}
+
+.lowest-stock-products-table tr:nth-child(odd) {
+  background-color: #2A3C5F;
+}
+@media (max-width: 950px) {
+  .lowest-stock-products-container{
+    width: 100%;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .lowest-stock-products-container .titles {
+    font-size: 16px;
+  }  
+}
+@media (max-width: 768px) {
+  .dashboard--card {
+    display: flex;
+    flex-direction: column;  
+  }
+}
+@media screen and (max-width: 950px) {
+  .dash--card{
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+.lowest-stock-products-container{
+  margin-right: 20px;
+  margin-left: -20px;
+}
+}

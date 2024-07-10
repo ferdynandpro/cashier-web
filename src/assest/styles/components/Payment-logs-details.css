@@ -1,0 +1,40 @@
+.payment-log-details{
+    padding: 50px;
+    background-color: #2A3C5F;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    border: 2px solid #2A3C5F;
+}
+
+.payment--id{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid  #080F25;
+    background-color: #2A3C5F;
+    
+}
+.pn--data{
+    color: white;
+    margin-bottom: 10px;
+    background-color: #2A3C5F;
+}
+
+.wrapper--data li{
+    border-bottom: 3px solid  #080F25;
+    background-color: #2A3C5F;
+
+}
+@media screen and (max-width: 950px) {
+    .payment--id{
+        color: white;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid  #080F25;
+        background-color: #2A3C5F;
+        
+    }
+    }

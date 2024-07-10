@@ -1,0 +1,216 @@
+.payment {
+    padding: 20px;
+    border: 2px solid #212C4D;
+    background-color: #101935;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow */
+}
+
+.payment--container{
+
+    background-color: #212C4D;
+}
+
+.payment .titles{
+    background-color: #101935;
+    display: flex;
+    justify-content: center;
+}
+
+tbody{
+    background-color: #212C4D;
+}
+
+.payment-table .quantity-controls button {
+    background-color: #6C72FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.payment-table .quantity-controls button:hover {
+    background-color: #246ebd;
+}
+
+.total-price {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.payment-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.payment-table th, .payment-table td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+
+.payment-table th {
+    background-color: #101935;
+    color: white;
+}
+
+.payment-table tr{
+    background-color: #212C4D;
+}
+
+.payment-table tr:nth-child(even) {
+    background-color:#101935;
+}
+
+.quantity-controls span{
+    padding: 10px;
+}
+
+.bayar--btn{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.byr--btn{
+    padding: 20px 170px;
+    border-radius: 20px;
+    background-color: #6C72FF;
+    color: white;
+    font-weight: bold;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.amount-paid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.change{
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+
+.total-price{
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    background-color: #212C4D;
+}
+
+.total-price h3{
+    color: white;
+    background-color: #212C4D;
+}
+
+.amount-paid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #212C4D;
+}
+
+.amount-paid label{
+    color: white;
+    background-color: #212C4D;
+}
+.amount-paid input{
+    color: white;
+    background-color: #212C4D;
+    padding: 10px;
+    border: 2px solid #101935;
+}
+
+.change{
+    background-color: #212C4D;
+}
+.change h3{
+    background-color: #212C4D;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    color: white;
+}
+
+.quantity-controls{
+    border: 2px solid #101935;
+    /*background-color: #212C4D;
+    */width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    align-items: center;
+}
+
+.bayar--btn{
+background-color: #212C4D;
+}
+
+@media screen and (max-width: 550px) {
+    .byr--btn{
+        padding: 20px 0px;
+        width: 100%;
+        margin: 10px;
+    }
+    .payment-table tr th,td{
+        font-size: 10px;
+    }
+    .delete--btn{
+        font-size: 10px;
+    }
+    .total-price h3{
+        font-size: 12px;
+    }
+    .amount-paid label{
+        font-size: 12px;
+    }
+    .amount-paid input{
+        width: 70%;
+    }
+   }
+   @media screen and (max-width: 350px) {
+    .payment-table tr th,td{
+        font-size: 7px;
+    }
+    .delete--btn{
+        font-size: 7px;
+    }
+    .total-price h3{
+        font-size: 12px;
+    }
+    .amount-paid label{
+        font-size: 12px;
+    }
+    .amount-paid input{
+        width: 70%;
+    }
+    .quantity-controls{
+        width: 50px;
+    }
+   }

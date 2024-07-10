@@ -1,0 +1,48 @@
+.title--count{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 0px 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #101935;
+}
+
+.counts{
+    color:rgb(255, 255, 255) ;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #101935;
+}
+
+
+/*>>>>>breakpoint<<<<<*/
+@media screen and (max-width: 950px) {
+    .title--count{
+        /* background-color: #fff; */
+    }
+    .counts{
+        font-size: 40px;
+    }
+    /* .count--product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+}
+
+@media screen and (max-width: 450px) {
+      .title--count{
+          font-size: 16px;
+      }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .title--count{
+        font-size: 10px;
+    }
+    .counts{
+        font-size: 40px;
+    }
+}

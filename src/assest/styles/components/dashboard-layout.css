@@ -1,0 +1,46 @@
+/* dashboard-layout.css */
+
+.layout {
+    display: flex;
+    justify-content: start;
+    background-color: rgb(223, 223, 223);
+  }
+  
+  .outlet {
+    width: 95%;
+    padding: 50px;
+    /* height: 100%; */
+    min-height: 100vh;
+    background-color: var(--first-color);
+    border-left: 2px solid var(--third-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .layout {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 2px solid var(--third-color);
+    }
+  
+    .outlet {
+      width: 100%;
+      padding: 20px;
+      border-left: none;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .dashboard--card {
+      display: flex;
+      flex-direction: column;  
+    }
+
+    .count--product{
+      width: 100%;
+    }
+  }

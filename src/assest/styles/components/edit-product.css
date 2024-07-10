@@ -1,0 +1,14 @@
+.sss{
+    /* background-color: #fff; */
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .submit--btn{
+        padding: 0;
+        margin: 0;
+        width: 130px;
+        margin-right: 10px;
+    }
+    
+  }
