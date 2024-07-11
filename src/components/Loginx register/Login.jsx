@@ -1,74 +1,56 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './auth.css'; // Import the CSS file
 
-const Login = () => {
+const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
       const response = await fetch('https://back-end-cashier.vercel.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({
+          username,
+          password,
+        }),
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem('token', data.token);
-        navigate('/admin/dashboard/dashboard');
-      } else {
-        setError(data.message);
+      if (!response.ok) {
+        throw new Error('Login failed');
       }
+
+      const data = await response.json();
+      console.log('Success:', data);
+      // Handle successful login, e.g., store token in localStorage, redirect user, etc.
     } catch (error) {
-      console.error('Error during login:', error);
-      setError('Something went wrong. Please try again later.');
+      console.error('Error during login:', error.message);
+      setError('Login failed. Please check your credentials and try again.');
     }
   };
 
   return (
-    <div className="auth--container">
-
-    <div className="auth-container">
-      <h2 className='titles'>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className='input--div'>
-          <label>Username:</label>
-          <input
-            className='login--input'
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            />
-        </div>
-        <div className='input--div'>
-          <label>Passwordxxxxxxxxx:</label>
-          <input
-          className='pass--input'
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            />
-        </div>
-        {error && <p>{error}</p>}
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
+        <label>
+          Username:
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <br />
         <button type="submit">Login</button>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
-      <div className="link">
-        <a href="/register">Don't have an account? Register here</a>
-      </div>
     </div>
-            </div>
   );
 };
 
-export default Login;
+export default LoginForm;
