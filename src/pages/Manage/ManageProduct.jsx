@@ -108,9 +108,9 @@ const ManageProduct = () => {
       <div className="manage--content">
         <div className="button-container">
           <select className='select--by' value={selectedCategory} onChange={handleCategoryChange}>
-            <option value="All">All Categories</option>
-            {Array.from(new Set(allProducts.map(product => product.category))).map(category => (
-              <option key={category} value={category}>{category}</option>
+            <option key="All" value="All">All Categories</option>
+            {Array.from(new Set(allProducts.map(product => product.category))).map((category, index) => (
+              <option key={index} value={category}>{category}</option>
             ))}
           </select>
           <button className='download-btn' onClick={handleDownloadPDF}>Download List Of Product</button>

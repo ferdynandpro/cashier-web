@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LowestStock from '../../components/LowestStock/LowestStock';
-import ProfitSummary from '../../components/ProfitSummary/ProfitSummary';
+// import ProfitSummary from '../../components/ProfitSummary/ProfitSummary';
 import LastProduct from '../../components/LastAdd/LastProduct';
 import ProductCount from '../../components/Product-Count/ProductCount';
 import '../../assest/styles/components/dashboard.css';
