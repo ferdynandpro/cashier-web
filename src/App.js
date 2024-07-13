@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Loginx register/Login';
+import Register from './components/Loginx register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
 import DashboardLayout from './pages/Dashboard/DashboardLayout';
 import Pembayaran from './pages/Payment/Pembayaran';
@@ -12,12 +14,20 @@ import EditProduct from './pages/Update-Product/EditProduct';
 
 import '../src/assest/styles/global/global.css'
 
+const PrivateRoute = ({ element: Element }) => {
+  const token = localStorage.getItem('token');
+  return token ? <Element /> : <Navigate to="/login" />;
+};
 
+function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/admin/dashboard" element={<PrivateRoute element={DashboardLayout} />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="pembayaran" element={<PrivateRoute element={Pembayaran} />} />
           <Route path="upload" element={<PrivateRoute element={AddProduct} />} />
           <Route path="manage" element={<PrivateRoute element={ManageProduct} />} />
