@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios
 import { useNavigate } from 'react-router-dom';
 import './auth.css'; // Import the CSS file
 
@@ -12,21 +13,16 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://back-end-cashier-api.vercel.app/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('https://back-end-cashier-api.vercel.app/login', {
+        username,
+        password,
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem('token', data.token);
+      if (response.status === 200) {
+        localStorage.setItem('token', response.data.token);
         navigate('/admin/dashboard/dashboard');
       } else {
-        setError(data.message);
+        setError(response.data.message);
       }
     } catch (error) {
       console.error('Error during login:', error);
@@ -35,39 +31,36 @@ const Login = () => {
   };
 
   return (
-    <div className="auth--container">
-
     <div className="auth-container">
-      <h2 className='titles'>Login</h2>
+      <h2 className="titles">Login</h2>
       <form onSubmit={handleSubmit}>
-        <div className='input--div'>
+        <div className="input-div">
           <label>Username:</label>
           <input
-            className='login--input'
+            className="login-input"
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            />
+          />
         </div>
-        <div className='input--div'>
+        <div className="input-div">
           <label>Password:</label>
           <input
-          className='pass--input'
+            className="pass-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            />
+          />
         </div>
-        {error && <p>{error}</p>}
+        {error && <p className="error-message">{error}</p>}
         <button type="submit">Login</button>
       </form>
       <div className="link">
-        <a href="/register">Don't have an account? Register here</a>
+        <p>Don't have an account? <a href="/register">Register here</a></p>
       </div>
     </div>
-            </div>
   );
 };
 
