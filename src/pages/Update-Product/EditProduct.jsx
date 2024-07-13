@@ -71,7 +71,7 @@ const EditProduct = () => {
       updatedAt
     }
 
-    fetch(`https://back-end-cashier.vercel.app/product/${id}`, {
+    fetch(`http://localhost:5000/product/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
