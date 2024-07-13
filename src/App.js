@@ -12,24 +12,10 @@ import EditProduct from './pages/Update-Product/EditProduct';
 
 import '../src/assest/styles/global/global.css'
 
-const PrivateRoute = ({ element: Element }) => {
-  const token = localStorage.getItem('token');
-  return token ? <Element /> : <Navigate to="/login" />;
-};
-
-function App() {
-  // Fungsi untuk mengecek token
-  const isAuthenticated = () => {
-    const token = localStorage.getItem('token');
-    return !!token; // Mengembalikan true jika token ada, false jika tidak
-  };
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={isAuthenticated() ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/admin/dashboard" element={<PrivateRoute element={DashboardLayout} />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="pembayaran" element={<PrivateRoute element={Pembayaran} />} />
