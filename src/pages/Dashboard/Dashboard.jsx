@@ -16,7 +16,7 @@ const Dashboard = () => {
   }, []);
 
   const fetchProductCount = () => {
-    fetch("http://localhost:5000/products")
+    fetch("https://back-end-cashier-api.vercel.app/products")
       .then(res => res.json())
       .then(data => setProductCount(data.length)) // Menghitung jumlah produk
       .catch(error => console.error("Error fetching product count:", error));
