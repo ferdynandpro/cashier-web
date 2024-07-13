@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Import axios
 import './auth.css';
 
 const Register = () => {
@@ -9,19 +8,26 @@ const Register = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('https://back-end-cashier-api.vercel.app/register', {
-        username,
-        password,
+      const response = await fetch('https://back-end-cashier-api.vercel.app/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
       });
 
-      if (response.status === 201) {
+      const data = await response.json();
+
+      if (response.ok) {
         navigate('/login');
       } else {
-        setError(response.data.message);
+        setError(data.message);
       }
     } catch (error) {
       console.error('Error during registration:', error);
