@@ -12,7 +12,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://back-end-cashier.vercel.app/login', { // Ganti dengan URL backend Anda
+      const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,31 +35,39 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Login</h2>
+    <div className="auth--container">
+
+    <div className="auth-container">
+      <h2 className='titles'>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className='input--div'>
           <label>Username:</label>
           <input
+            className='login--input'
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-          />
+            />
         </div>
-        <div className="form-group">
+        <div className='input--div'>
           <label>Password:</label>
           <input
+          className='pass--input'
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
+            />
         </div>
-        {error && <p className="error">{error}</p>}
+        {error && <p>{error}</p>}
         <button type="submit">Login</button>
       </form>
+      <div className="link">
+        <a href="/register">Don't have an account? Register here</a>
+      </div>
     </div>
+            </div>
   );
 };
 
