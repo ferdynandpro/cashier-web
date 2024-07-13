@@ -52,7 +52,7 @@ const Payment = ({ selectedProducts, onUpdateQuantity, onPayment }) => {
           totalPrice: product.sellingPrice * product.quantity
         };
 
-        const detailResponse = await fetch(`https://back-end-cashier.vercel.app/bukti-pembayaran/${buktiId}/detail`, {
+        const detailResponse = await fetch(`http://localhost:5000/bukti-pembayaran/${buktiId}/detail`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const Payment = ({ selectedProducts, onUpdateQuantity, onPayment }) => {
       }
 
       for (const product of selectedProducts) {
-        const response = await fetch(`https://back-end-cashier.vercel.app/product/${product._id}`, {
+        const response = await fetch(`http://localhost:5000/product/${product._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'

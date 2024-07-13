@@ -12,7 +12,7 @@ const ProductList = ({ onSelectProduct }) => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://back-end-cashier.vercel.app/products');
+                const response = await fetch('http://localhost:5000/products');
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }
