@@ -12,7 +12,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8000/login', {
+      const response = await fetch('https://back-end-cashier-api.vercel.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
